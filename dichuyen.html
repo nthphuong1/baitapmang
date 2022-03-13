@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img id="anh" src="R.png" alt="" style="width: 100px; position: relative; left: 100px;top: 300px;">
+    <button onclick="trai()"> Trái</button>
+    <button onclick="phai()"> Phải</button>
+    <button onclick="len()"> Lên</button>
+    <button onclick="xuong()"> Xuống</button>
+    <button onclick="cheoTtrai()"> Chéo Xuống Trái</button>
+    <button onclick="cheoPhai()"> Chéo Xuống Phải</button>
+    <script>
+        let move = document.getElementById('anh')
+        // function trai() {
+        //     move.style.left = parseInt(move.style.left) + 10 + "px";
+        // }
+        // function phai() {
+        //     move.style.left = parseInt(move.style.left) - 10 + "px";
+        // }
+        // function xuong() {
+        //     move.style.top = parseInt(move.style.top) + 10 + "px";
+        // }
+        // function len() {
+        //     move.style.top = parseInt(move.style.top) - 10 + "px";
+        // }
+        // function cheoTtrai() {
+        //     move.style.left = parseInt(move.style.left) + 10 + "px" 
+        //         move.style.top = parseInt(move.style.top) - 10 + "px";
+        // }
+        // function cheoPhai() {
+        //     move.style.left = parseInt(move.style.left) - 10 + "px"
+        //     move.style.top = parseInt(move.style.top) + 10 + "px";
+        // }
+        window.addEventListener("keydown", (evt)=>{
+            console.log(evt);
+            if (evt.key == "ArrowRight") {
+                move.style.left = parseInt(move.style.left) + 10 + 'px';
+            }
+            if (evt.key == "ArrowLeft") {
+                move.style.left = parseInt(move.style.left) - 10 + 'px';
+            }
+            if (evt.key == "ArrowUp") {
+                move.style.top = parseInt(move.style.top) - 10 + 'px';
+            }
+            if (evt.key == "ArrowDown") {
+                move.style.top = parseInt(move.style.top) + 10 + 'px';
+            }
+            if (evt.key == "z") {
+                move.style.left = parseInt(move.style.left) - 10 + 'px';
+                move.style.top = parseInt(move.style.top) + 10 + 'px';
+            }
+        })
+    </script>
+</body>
+
+</html>
